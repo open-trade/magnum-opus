@@ -29,7 +29,7 @@ fn find_package(name: &str) -> Vec<PathBuf> {
     path.push(target);
     println!(
         "{}",
-        format!("cargo:rustc-link-lib={}", name.trim_start_matches("lib"))
+        format!("cargo:rustc-link-lib=static={}", name.trim_start_matches("lib"))
     );
     println!(
         "{}",
